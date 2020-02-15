@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Sally Student resume</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<script src="script.js">
+
+	</script>
+	<section id="save">
+		<h1>Sally Student Resume</h1>
+		<section class="sheet">
+			<aside>
+				<section class="contact">
+					<address> 123 Any Steet </br> SomeCity, ZZ, 000000
+					</address>
+					<p>123-456-7890</br>sally@gmail.com</p>
+				</section>
+				<section class="skills">
+					<h6>Skills</h6>
+					<ul>
+						<li>Agile</li>
+						<li>Dev Ops</li>
+						<li>AWS</li>
+						<li>PPT Presentations</li>
+					</ul>
+				</section>
+				<section class="technologies">
+					<h6>Technologies</h6>
+					<ul>
+						<li>Agile</li>
+						<li>Dev Ops</li>
+						<li>AWS</li>
+						<li>PPT Presentations</li>
+					</ul>
+				</section>
+			</aside>
+			<section>
+        <section>
+        <h3>Summary</h3>
+        </section>
+			</section>
+		</section>
+	</section>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "html_css_fundamentals"
+		},
+		{
+			"path": "JS Fundamentals"
+		},
+		{
+			"path": "JQuery"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "JQuery"
+	}
+}
