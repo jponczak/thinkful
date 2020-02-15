@@ -1,0 +1,133 @@
+@media only screen and (max-width: 519px) and (min-width: 300px) {
+    header {
+        color: white;
+        padding: 1em;
+        line-height: 1.2em;
+    }
+
+    #questionForm {
+        width: 100%;
+    }
+
+    .trivia {
+        margin: auto;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    .triviaContent {
+        font-size: 22px;
+        font-weight: bold;
+        color: white;
+        border: 1px solid white;
+        padding: 1em;
+        border-radius: 2px;
+        line-height: 1em;
+    }
+
+    .triviaContent h1 {
+        font-size: 1em;
+    }
+/* 
+    .triviaContent p {
+        letter-spacing: 0.1em;
+    } */
+
+    .mainSection {
+        font-size: .9em;
+    }
+
+    /* .verticalRadioButtons {
+        font-size: .9em;
+    } */
+
+    .answer {
+        font-size: 0.8em;
+    } 
+}
+
+@media only screen and (max-width: 989px) and (min-width: 520px) {
+    header {
+        color: white;
+        padding: 1em;
+        line-height: 1.2em;
+    }
+
+    #questionForm {
+        width: 100%;
+    }
+
+    
+    .trivia {
+        margin: auto;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        text-align: center;
+        text-transform: none;
+    }
+
+    .triviaContent {
+        font-size: 22px;
+        font-weight: bold;
+        color: white;
+        border: 1px solid white;
+        padding: 1em;
+        border-radius: 2px;
+        line-height: 1em;
+    }
+}
+
+@media only screen and (min-width: 990px) {
+    header {
+        color: white;
+        padding: 1em;
+        line-height: 1.2em;
+    }
+
+    main {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .trivia {
+        width: 80%;
+        height: 75%;
+        margin: auto;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    .triviaContent {
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        border: 3px solid white;
+        padding: 1em 1.6em;
+        font-weight: 100;
+        border-radius: 5px;
+        line-height: 1em;
+    }
+
+    .navbar {
+        background: grey;
+        line-height: 2.3em;
+    }
+
+    .question h3 {
+        text-align: left;
+        text-transform: none;
+        line-height: 1.3em;
+    }
+
+}

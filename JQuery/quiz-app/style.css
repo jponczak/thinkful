@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+  background-image: url(./images/stars-bg.jpg);
+  min-width: 320px;
+  line-height: 1.4285em;
+}
+
+header {
+  text-align: center;
+  background: #2d3e50;
+}
+
+header h3 {
+  color: white;
+  font-family: 'Lato', sans-serif;
+}
+
+.triviaContent p {
+  letter-spacing: 0.2em;
+  text-transform: none;
+}
+
+form {
+  padding: 37px;
+}
+
+.button {
+  background-color: #4CAF50;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.blueButton {
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
+}
+
+.blueButton:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.mainSection[data-num='0'],
+.mainSection[data-num='1'],
+.mainSection[data-num='2'],
+.mainSection[data-num='3'],
+.mainSection[data-num='4'],
+.mainSection[data-num='5'],
+.mainSection[data-num='6'] {
+  display: none;
+}
+
+#questionForm {
+  margin: auto;
+  width: 85%;
+}
+
+.radioButtons {
+  float: left;
+}
+
+.radioButtons label {
+  display: inline-block;
+  padding: 4px 11px;
+  font-family: Arial;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+}
+
+input[type="radio"] {
+  vertical-align: top;
+}
+
+.radioButtons input[type="radio"]:checked+label {
+  background-color: #bbb;
+  vertical-align: middle;
+}
+
+.answer h2.right,
+.answer h2.wrong {
+  display: none;
+  width: 70%;
+  margin: auto;
+}
+
+.question {
+  text-align: left;
+}
+
+.question a {
+  color: aqua;
+}
+
+.answer > .right {
+  background: rgba(76, 175, 80, 0.6);
+  /* Green background with 30% opacity */
+  padding: 10px;
+  text-transform: none;
+}
+
+.answer > .wrong {
+  background: rgba(154, 0, 0, 0.6);
+  /* Green background with 30% opacity */
+  padding: 10px;
+  text-transform: none;
+}
+
+.verticalRadioButtons {
+  display: inline;
+}
+
+.verticalRadioButtons fieldset {
+  width: 65%;
+}
+
+.radioLabel::after {
+  z-index: 1000;
+  color: white;
+}
+
+.verticalRadioButtons div {
+  display: block;
+  padding: 0 0 5px 5px;
+  clear: both;
+  text-align: left;
+}
+
+.verticalRadioButtons span {
+  display: block;
+  padding-left: 20px;
+  cursor: inherit;
+}
+
+.verticalRadioButtons label {
+  font-size: rem-calc(16);
+}
+
+.verticalRadioButtons input {
+  float: left;
+  width: 20px;
+  margin-left: -20px;
+  margin-top: 6px; // vertically align radio button with text
+  padding: 0;
+  -webkit-appearance: radio;
+}

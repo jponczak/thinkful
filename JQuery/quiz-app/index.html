@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Scientific Discoveries in 2019</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato%7CPacifico&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="description" content="Thinkful Trivia Quiz" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="flex.css" />
+</head>
+
+<body>
+    <header>
+        <h3>New Scientific Discoveries in 2019!</h3>
+    </header>
+    <main>
+        <section class='trivia'>
+            <section class='triviaContent'>
+                <h1>Let's get ready to play!</h1>
+                <p>5 questions - get them right and impress your friends!As an added bonus, we will keep track of
+                    your score.</p>
+            </section>
+            <form id="startQuiz">
+                <button class="button blueButton">Challenge Accepted!</button>
+            </form>
+
+            <section class="questions"></section>
+            <section class="summary"></section>
+
+        </section>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="utils.js"></script>
+    <script src="questions.js"></script>
+    <script src="section.js"></script>
+    <script src="index.js"></script>
+</body>
