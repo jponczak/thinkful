@@ -1,0 +1,73 @@
+@media only screen and (max-width: 400px) {
+    body {
+        background-color: #222;
+    }
+
+    section.primary {
+        display: block;
+    }
+
+    .section-third {
+        width: 100%;
+        float: left;
+    }
+
+    header {
+        padding: 23% 0;
+        height: 220px;
+    }
+
+    .quiz-picture img {
+        width: 50%;
+        height: 50px;
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width:960px) {
+    body {
+        background-color: #555;
+    }
+
+    .section-third {
+        width: 100%;
+        float: left;
+    }
+
+    section.primary {
+        display: block;
+    }
+
+    header {
+        padding: 18% 0;
+        height: 200px;
+    }
+
+    .quiz-picture img {
+        width: 70%;
+        height: 70px;
+    }
+}
+
+@media only screen and (min-width:961px) {
+    body {
+        background-color: #888;
+    }
+
+    nav li {
+        float: left;
+    }
+
+    nav li a {
+        padding: 20px 30px;
+    }
+
+    nav .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    nav .menu-icon {
+        display: none;
+    }
+}

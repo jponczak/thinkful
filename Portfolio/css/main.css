@@ -1,4 +1,4 @@
-* {
+*, ::before, ::after {
     box-sizing: border-box;
   }
   
@@ -9,6 +9,7 @@
     color: #444;
     text-align: center;
     line-height: 1.5;
+    margin:0;
   }
   
   nav,
@@ -25,19 +26,239 @@
     z-index: 10;
   }
   
-  
-  
   header {
-    padding: 12% 0;
+    padding: 8% 0;
+    height:230px;
   }
-  
+
+  li a {
+    text-decoration: underline;
+    color: #333;
+  }
   section {
     min-height: 200px;
     padding: 6% 0;
     background-color: #bbb;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   section:nth-child(even) {
     background-color: #ddd;
   }
+
+  .section-third {
+    width:33.33%;
+    min-height:330px;
+    text-align: left;
+    padding:0 8px;
+  }
+
+  ul {
+    text-decoration: none;
+    list-style: none;
+  }
+
+  .my-projects {
+    background-color: #808080;
+  }
+
+  .about-me {
+    background-color: #909090;
+  }
+
+  .contact-me {
+    background-color: #A0A0A0;
+  }
+
+  /* nav {
+    height: 80px;
+    padding: 4px;
+  } */
+
+  /* header */
+
+nav {
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+nav li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+}
+
+nav li a:hover,
+nav .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+
+nav .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: grey;
+}
+
+/* menu */
+
+nav .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+nav .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+nav .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+nav .menu-icon .navicon:before,
+nav .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+nav .menu-icon .navicon:before {
+  top: 5px;
+}
+
+nav .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+nav .menu-btn {
+  display: none;
+}
+
+nav .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+nav .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+nav .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+nav .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+
+  .button {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 4px;
+  }
   
+  .blueButton {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+  }
+  
+  .blueButton:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+
+  #trivia, #project2, #project3 {
+    display: block;
+  }
+
+  .quiz-picture img {
+    height:300px;
+  }
+
+  .project-attributes, .project-links {
+    display: flex;
+    justify-content: center;
+}
+
+  nav li, .project-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  nav h4 {
+    float: left;
+  }
+
+  nav ul li {
+    float:right;
+  }
+
+  .project-links ul li {
+    float: left;
+  }
+
+  nav ul li a, .project-links ul li a {
+    display: block;
+    color: grey;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+
+  header p {
+    font-style: italic;
+  }

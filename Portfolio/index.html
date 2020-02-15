@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Ponczak's Portfolio</title>
     <meta charset="UTF-8" />
@@ -9,33 +10,98 @@
     <link rel="stylesheet" type="text/css" href="./css/main.css">
     <link rel="stylesheet" type="text/css" href="./css/flex.css">
 </head>
+
 <body>
-    <nav role="navigation">Nav</nav>
-    <main role="main">
-        <header role="banner">
-            <h1>Hero</h1>
+    <nav>
+        <a href="#" class="logo">Joe Ponczak</a>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+          <li><a href="#">Github</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>       
+    </nav>
+    <main>
+        <header>
+            <p>Joe codes all day long <br />
+                Great design with lots of thought <br />
+                what is my password?</p>
         </header>
 
-        <section>
-            Section 1
+        <section class="primary">
+            <div class="section-third my-projects">
+                <h4>The Developer In Me</h4>
+                <h5>I have had the opportunity to create some awesome full stack projects.</h5>
+                <ul>
+                    <li><a href="#trivia">Science Trivia Quiz</a></li>
+                    <li><a href="#project2">Project 2</a></li>
+                    <li><a href="#project3">Project 3</a></li>
+                </ul>
+            </div>
+            <div class="section-third about-me">
+                <h4>The Person In Me</h4>
+                <p>While my interests and passions run deep, I am always humbled.
+                    I love to be with my family, enjoy running and watching soccer, and maybe one day studying to be a
+                    horologist.
+                    I even like my dog most of the time.</p>
+            </div>
+            <div class="section-third contact-me">
+                <h4>Reach Out To Me</h4>
+                <form action="mailto:jponczak+thinkful@gmail.com">
+                    <button class="button blueButton">Reach out to me!</button>
+                </form>
+            </div>
         </section>
 
-        <section>
-            Section 2
+        <section id="trivia">
+            <h3>Science Trivia Quiz</h3>
+            <div class="quiz-picture">
+                <img src='./images/trivia-quiz-img.png' alt="science trivia quiz" />
+            </div>
+
+            <div class='project-attributes'>
+                <p>Tech Stack: Semantic HTML, Responsive CSS, JQuery</p>
+            </div>
+            <div class='project-links'>
+                <ul>
+                    <li><a href="#">Github</a></li>
+                    <li><a href="#">Live</a></li>
+                </ul>
+            </div>
         </section>
 
-        <section>
-            Section 3
+        <section id="project2">
+            <h3>Project 2</h3>
+            <div class="quiz-picture">
+            </div>
+            <div class='project-attributes'>
+                <p>Tech Stack: </p>
+            </div>
+            <div class='project-links'>
+                <ul>
+                    <li><a href="#">Github</a></li>
+                    <li><a href="#">Live</a></li>
+                </ul>
+            </div>
         </section>
 
-        <section>
-            Project 3
+        <section id="project3">
+            <h3>Project 3</h3>
+            <div class="quiz-picture">
+            </div>
+            <div class='project-attributes'>
+                <p>Tech Stack: </p>
+            </div>
+            <div class='project-links'>
+                <ul>
+                    <li><a href="#">Github</a></li>
+                    <li><a href="#">Live</a></li>
+                </ul>
+            </div>
         </section>
-        
-        <section>
-            Section 4
-        </section>
+
     </main>
-    <footer role="content-info">Footer</footer>
+    <footer>All rights reserved</footer>
 </body>
+
 </html>
