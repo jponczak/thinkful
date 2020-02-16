@@ -1,8 +1,4 @@
 @media only screen and (max-width: 400px) {
-    body {
-        background-color: #222;
-    }
-
     section.primary {
         display: block;
     }
@@ -10,11 +6,30 @@
     .section-third {
         width: 100%;
         float: left;
+        min-height:100%;
     }
 
     header {
         padding: 23% 0;
-        height: 220px;
+        height: 100%;
+    }
+
+    header h2, .section-third h3 {
+        font-size: 1.2em;
+    }
+
+    .my-projects, .about-me, .contact-me {
+        text-align: center;
+    }
+
+    .my-projects {
+        border-bottom: 1px solid #f9f7f7;
+        border-right:none;
+      }
+
+    .contact-me {
+        border-top: 1px solid #f9f7f7;
+        border-left:none;
     }
 
     .quiz-picture img {
@@ -23,23 +38,33 @@
     }
 }
 
-@media only screen and (min-width: 401px) and (max-width:960px) {
-    body {
-        background-color: #555;
-    }
-
+@media only screen and (min-width: 401px) and (max-width:1111px) {
     .section-third {
         width: 100%;
         float: left;
+        min-height:100%;
     }
 
     section.primary {
         display: block;
     }
 
+    .my-projects, .about-me, .contact-me {
+        text-align: center;
+    }
+
+    .my-projects {
+        border-bottom: 1px solid #f9f7f7;
+        border-right:none;
+      }
+
+      .contact-me {
+        border-top: 1px solid #f9f7f7;
+        border-left:none;
+      }
+
     header {
-        padding: 18% 0;
-        height: 215px;
+        padding: none;
     }
 
     .quiz-picture img {
@@ -48,11 +73,7 @@
     }
 }
 
-@media only screen and (min-width:961px) {
-    body {
-        background-color: #888;
-    }
-
+@media only screen and (min-width:1112px) {
     nav li {
         float: left;
     }

@@ -1,3 +1,5 @@
+/* https://colorhunt.co/palette/22272 */
+
 *, ::before, ::after {
     box-sizing: border-box;
   }
@@ -6,16 +8,29 @@
     font-family: "Open Sans",
     sans-serif; 
     font-size: 20px;
-    color: #444;
+    background-color: #f9f7f7;
     text-align: center;
     line-height: 1.5;
     margin:0;
+    font-weight:300;
+  }
+  
+  h3 {
+    font-size: 2.1em;
+    color: #112d4e;
+  }
+
+  footer {
+    background-color: #112d4e;
+  }
+
+  footer a {
+    color: #f9f7f7;
   }
   
   nav,
   footer {
     padding: 1% 0;
-    background-color: #aaa;
   }
   
   nav {
@@ -28,32 +43,49 @@
   
   header {
     padding: 8% 0;
-    height:230px;
+    height:375px;
+  }
+
+
+  header h2, .section-third h2 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    color: #112d4e;
+    font-size: 2.0em;
+    line-height:1.5;
   }
 
   li a {
     text-decoration: underline;
     color: #333;
   }
+
   section {
     min-height: 200px;
-    padding: 6% 0;
-    background-color: #bbb;
+    padding: 1% 0;
+    background-color: #f9f7f7;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
-  section:nth-child(even) {
-    background-color: #ddd;
-  }
-
   .section-third {
     width:33.33%;
-    min-height:330px;
+    min-height:400px;
     text-align: left;
-    padding:0 8px;
+    padding:20px;
+  }
+
+  .my-projects {
+    border-right: 1px solid #f9f7f7;
+  }
+
+  .contact-me {
+    border-left: 1px solid #f9f7f7;
+  }
+
+  .section-third p {
+    font-size:1.0em;
   }
 
   ul {
@@ -61,136 +93,120 @@
     list-style: none;
   }
 
-  .my-projects {
-    background-color: #808080;
+  .my-projects, .about-me, .contact-me {
+    background-color: #dbe2ef;
   }
 
-  .about-me {
-    background-color: #909090;
+  nav {
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
   }
 
-  .contact-me {
-    background-color: #A0A0A0;
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
   }
 
-  /* nav {
-    height: 80px;
-    padding: 4px;
-  } */
+  nav li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+  }
 
-  /* header */
+  nav li a:hover,
+  nav .menu-btn:hover {
+    background-color: #f4f4f4;
+  }
 
-nav {
-  background-color: #fff;
-  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
-  position: fixed;
-  width: 100%;
-  z-index: 3;
-}
-
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow: hidden;
-  background-color: #fff;
-}
-
-nav li a {
-  display: block;
-  padding: 20px 20px;
-  border-right: 1px solid #f4f4f4;
-  text-decoration: none;
-}
-
-nav li a:hover,
-nav .menu-btn:hover {
-  background-color: #f4f4f4;
-}
-
-nav .logo {
-  display: block;
-  float: left;
-  font-size: 2em;
-  padding: 10px 20px;
-  text-decoration: none;
-  color: grey;
-}
+  nav .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #112d4e;
+  }
 
 /* menu */
 
-nav .menu {
-  clear: both;
-  max-height: 0;
-  transition: max-height .2s ease-out;
-}
+  nav .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
 
-/* menu icon */
+  /* menu icon */
 
-nav .menu-icon {
-  cursor: pointer;
-  display: inline-block;
-  float: right;
-  padding: 28px 20px;
-  position: relative;
-  user-select: none;
-}
+  nav .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
 
-nav .menu-icon .navicon {
-  background: #333;
-  display: block;
-  height: 2px;
-  position: relative;
-  transition: background .2s ease-out;
-  width: 18px;
-}
+  nav .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
 
-nav .menu-icon .navicon:before,
-nav .menu-icon .navicon:after {
-  background: #333;
-  content: '';
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all .2s ease-out;
-  width: 100%;
-}
+  nav .menu-icon .navicon:before,
+  nav .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
 
-nav .menu-icon .navicon:before {
-  top: 5px;
-}
+  nav .menu-icon .navicon:before {
+    top: 5px;
+  }
 
-nav .menu-icon .navicon:after {
-  top: -5px;
-}
+  nav .menu-icon .navicon:after {
+    top: -5px;
+  }
 
-/* menu btn */
+  /* menu btn */
 
-nav .menu-btn {
-  display: none;
-}
+  nav .menu-btn {
+    display: none;
+  }
 
-nav .menu-btn:checked ~ .menu {
-  max-height: 240px;
-}
+  nav .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
 
-nav .menu-btn:checked ~ .menu-icon .navicon {
-  background: transparent;
-}
+  nav .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
 
-nav .menu-btn:checked ~ .menu-icon .navicon:before {
-  transform: rotate(-45deg);
-}
+  nav .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
 
-nav .menu-btn:checked ~ .menu-icon .navicon:after {
-  transform: rotate(45deg);
-}
+  nav .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
 
-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-  top: 0;
-}
-
+  nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
 
   .button {
     background-color: #4CAF50;
@@ -207,13 +223,13 @@ nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     cursor: pointer;
     border-radius: 4px;
   }
-  
+
   .blueButton {
     background-color: white;
     color: black;
     border: 2px solid #008CBA;
   }
-  
+
   .blueButton:hover {
     background-color: #008CBA;
     color: white;
@@ -227,10 +243,15 @@ nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     height:300px;
   }
 
+  .not-yet, #project2, #project3 {
+    display:none;
+  }
+
   .project-attributes, .project-links {
     display: flex;
     justify-content: center;
-}
+    font-weight:700;
+  }
 
   nav li, .project-links ul {
     list-style-type: none;
@@ -253,12 +274,9 @@ nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
 
   nav ul li a, .project-links ul li a {
     display: block;
-    color: grey;
+    color: #3f72af;
     text-align: center;
     padding: 16px;
     text-decoration: none;
-  }
-
-  header p {
-    font-style: italic;
+    font-weight:300;
   }
