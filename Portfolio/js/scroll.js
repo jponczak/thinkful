@@ -1,5 +1,6 @@
 /* controls flow */
 function init() {
+    $('.nav-content').hide();
     scrollFunction();
     moveToTop();
 }
