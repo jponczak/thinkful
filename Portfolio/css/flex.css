@@ -9,6 +9,10 @@
         min-height:100%;
     }
 
+    #trivia, #project2, #project3 {
+        padding:20px;
+    }
+
     header {
         padding: 23% 0;
         height: 100%;
