@@ -6,21 +6,22 @@
     <meta charset="UTF-8" />
     <meta name="description" content="Thinkful Portfolio Layout" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:700|Open+Sans:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:700%7COpen+Sans:300,400" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
     <link rel="stylesheet" type="text/css" href="./css/flex.css">
 </head>
 
 <body>
+    <button id="topBtn" title="Go to top">Top</button>
     <nav>
         <a href="#" class="logo">Joe Ponczak</a>
         <input class="menu-btn" type="checkbox" id="menu-btn" />
         <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
         <ul class="menu">
-          <li><a href="https://github.com/jponczak/thinkful" target="_blank">Github</a></li>
-          <li><a href="https://www.linkedin.com/in/jponczak/" target="_blank">LinkedIn</a></li>
-        </ul>       
+            <li><a href="https://github.com/jponczak/thinkful" target="_blank">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/jponczak/" target="_blank">LinkedIn</a></li>
+        </ul>
     </nav>
     <main>
         <header>
@@ -41,8 +42,9 @@
             </div>
             <div class="section-third about-me">
                 <h2>The Person In Me</h2>
-                <p>Yes. That is Haiku.  While my interests and passions run deep, I am always humbled.
-                    I love to be with my family, enjoy running and watching soccer, history, art, and maybe one day studying to be a
+                <p>Yes. That is Haiku. While my interests and passions run deep, I am always humbled.
+                    I love to be with my family, enjoy running and watching soccer, history, art, and maybe one day
+                    studying to be a
                     horologist.
                     My dog is pretty awesome too.</p>
             </div>
@@ -56,7 +58,9 @@
 
         <section id="trivia">
             <h3>Science Trivia Quiz</h3>
-            <p>This project is a 5 question trivia quiz that met tracks the score and question number, provides feedback for each right or wrong answer, displays a summary at the end, and enforces rules as to when a user can continue to the next question.</p>
+            <p>This project is a 5 question trivia quiz that met tracks the score and question number, provides feedback
+                for each right or wrong answer, displays a summary at the end, and enforces rules as to when a user can
+                continue to the next question.</p>
             <div class="quiz-picture">
                 <img src='./images/trivia-quiz-img.png' alt="science trivia quiz" />
             </div>
@@ -66,7 +70,8 @@
             </div>
             <div class='project-links'>
                 <ul>
-                    <li><a href="https://github.com/jponczak/thinkful/tree/master/JQuery/quiz-app" target="_blank">Github</a></li>
+                    <li><a href="https://github.com/jponczak/thinkful/tree/master/JQuery/quiz-app"
+                            target="_blank">Github</a></li>
                     <li><a href="https://jponczak.github.io/thinkful/JQuery/quiz-app/" target="_blank">Live</a></li>
                 </ul>
             </div>
@@ -105,7 +110,11 @@
         </section>
 
     </main>
-    <footer><p><a href="mailto:jponczak@gmail.com">jponczak@gmail.com</a></p></footer>
+    <footer>
+        <p><a href="mailto:jponczak@gmail.com">jponczak@gmail.com</a></p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/scroll.js"></script>
 </body>
 
 </html>
