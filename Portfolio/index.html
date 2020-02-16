@@ -19,8 +19,11 @@
         <input class="menu-btn" type="checkbox" id="menu-btn" />
         <label class="menu-icon" for="menu-btn" value="menu hamburger"><span class='nav-content'>Hamburger Menu</span><span class="navicon"></span></label>
         <ul class="menu">
-            <li><a href="https://github.com/jponczak/thinkful" target="_blank">Github</a></li>
-            <li><a href="https://www.linkedin.com/in/jponczak/" target="_blank">LinkedIn</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">My Projects</a></li>
+            <!-- <li><a href="https://github.com/jponczak/thinkful" target="_blank">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/jponczak/" target="_blank">LinkedIn</a></li> -->
         </ul>
     </nav>
     <main>
@@ -31,7 +34,7 @@
         </header>
 
         <section class="primary">
-            <div class="section-third my-projects">
+            <div id = "projects" class="section-third my-projects">
                 <h2>The Developer In Me</h2>
                 <p>As a team player and individual contributor, I have had the opportunity to create some awesome full stack projects.</p>
                 <ul>
@@ -40,7 +43,7 @@
                     <li class="not-yet"><a href="#project3">Project 3</a></li>
                 </ul>
             </div>
-            <div class="section-third about-me">
+            <div id = "about" class="section-third about-me">
                 <h2>The Person In Me</h2>
                 <p>Yes. That is Haiku. While my interests and passions run deep, I am always humbled.
                     I love to be with my family, enjoy running and watching soccer, history, art, and maybe one day
@@ -48,11 +51,17 @@
                     horologist.
                     My dog is pretty awesome too.</p>
             </div>
-            <div class="section-third contact-me">
+            <div id = "contact" class="section-third contact-me">
                 <h2>Reach Out To Me</h2>
-                <form action="mailto:jponczak+thinkful@gmail.com">
-                    <button class="button blueButton">Reach out to me!</button>
-                </form>
+                <ul class="menu">
+                    <li><a href="mailto:jponczak@gmail.com">Email</a></li>
+                    <li><a href="https://github.com/jponczak/thinkful" target="_blank">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/jponczak/" target="_blank">LinkedIn</a></li>
+                </ul>
+        
+                <!-- <form action="mailto:jponczak+thinkful@gmail.com">
+                    <button class="button blueButton">Email Me!</button>
+                </form> -->
             </div>
         </section>
 

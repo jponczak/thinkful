@@ -74,7 +74,7 @@
   }
   .section-third {
     width:33.33%;
-    min-height:400px;
+    min-height:430px;
     text-align: left;
     padding:20px;
   }
@@ -279,7 +279,7 @@
     display: block;
     color: #3f72af;
     text-align: center;
-    padding: 16px;
+    padding: 8px;
     text-decoration: none;
     font-weight:300;
   }
