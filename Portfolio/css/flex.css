@@ -36,6 +36,10 @@
         width: 50%;
         height: 50px;
     }
+
+    ul {
+        padding:0;
+    }
 }
 
 @media only screen and (min-width: 401px) and (max-width:1111px) {
@@ -69,7 +73,7 @@
 
     .quiz-picture img {
         width: 70%;
-        height: 70px;
+        height: 70%;
     }
 }
 
