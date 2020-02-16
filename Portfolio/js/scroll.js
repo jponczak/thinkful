@@ -8,7 +8,7 @@ function scrollFunction() {
     /* checks to see if the user scrolls */
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
-        if (scroll > 100) {
+        if (scroll > 100 && $(window).width() > 320) {
             $('#topBtn').css('display','block');
         } else {
             $('#topBtn').css('display','none');
