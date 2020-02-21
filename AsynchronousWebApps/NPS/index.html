@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>State Park Finder</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Plan a vacation with the National Parks Service</h1>
+
+        <form id="js-form">
+            <fieldset>
+            <label for="max-results">Maximum results to return</label>
+            <input type="number" name="max-results" id="js-max-results" value="10">
+            <br /><br />
+
+            <div id="states">
+            <legend>Which states are you interested in?</legend>
+                <input type="checkbox" name="state-park" value="AL">Alabama<br />
+                <input type="checkbox" name="state-park" value="AK">Alaska<br />
+                <input type="checkbox" name="state-park" value="AZ">Arizona<br />
+                <input type="checkbox" name="state-park" value="AR">Arkansas<br />
+                <input type="checkbox" name="state-park" value="CA">California<br />
+                <input type="checkbox" name="state-park" value="CO">Colorado<br />
+                <input type="checkbox" name="state-park" value="CT">Connecticut<br />
+                <input type="checkbox" name="state-park" value="DE">Delaware<br />
+                <input type="checkbox" name="state-park" value="DC">District Of Columbia<br />
+                <input type="checkbox" name="state-park" value="FL">Florida<br />
+                <input type="checkbox" name="state-park" value="GA">Georgia<br />
+                <input type="checkbox" name="state-park" value="HI">Hawaii<br />
+                <input type="checkbox" name="state-park" value="ID">Idaho<br />
+                <input type="checkbox" name="state-park" value="IL">Illinois<br />
+                <input type="checkbox" name="state-park" value="IN">Indiana<br />
+                <input type="checkbox" name="state-park" value="IA">Iowa<br />
+                <input type="checkbox" name="state-park" value="KS">Kansas<br />
+                <input type="checkbox" name="state-park" value="KY">Kentucky<br />
+                <input type="checkbox" name="state-park" value="LA">Louisiana<br />
+                <input type="checkbox" name="state-park" value="ME">Maine<br />
+                <input type="checkbox" name="state-park" value="MD">Maryland<br />
+                <input type="checkbox" name="state-park" value="MA">Massachusetts<br />
+                <input type="checkbox" name="state-park" value="MI">Michigan<br />
+                <input type="checkbox" name="state-park" value="MN">Minnesota<br />
+                <input type="checkbox" name="state-park" value="MS">Mississippi<br />
+                <input type="checkbox" name="state-park" value="MO">Missouri<br />
+                <input type="checkbox" name="state-park" value="MT">Montana<br />
+                <input type="checkbox" name="state-park" value="NE">Nebraska<br />
+                <input type="checkbox" name="state-park" value="NV">Nevada<br />
+                <input type="checkbox" name="state-park" value="NH">New Hampshire<br />
+                <input type="checkbox" name="state-park" value="NJ">New Jersey<br />
+                <input type="checkbox" name="state-park" value="NM">New Mexico<br />
+                <input type="checkbox" name="state-park" value="NY">New York<br />
+                <input type="checkbox" name="state-park" value="NC">North Carolina<br />
+                <input type="checkbox" name="state-park" value="ND">North Dakota<br />
+                <input type="checkbox" name="state-park" value="OH">Ohio<br />
+                <input type="checkbox" name="state-park" value="OK">Oklahoma<br />
+                <input type="checkbox" name="state-park" value="OR">Oregon<br />
+                <input type="checkbox" name="state-park" value="PA">Pennsylvania<br />
+                <input type="checkbox" name="state-park" value="RI">Rhode Island<br />
+                <input type="checkbox" name="state-park" value="SC">South Carolina<br />
+                <input type="checkbox" name="state-park" value="SD">South Dakota<br />
+                <input type="checkbox" name="state-park" value="TN">Tennessee<br />
+                <input type="checkbox" name="state-park" value="TX">Texas<br />
+                <input type="checkbox" name="state-park" value="UT">Utah<br />
+                <input type="checkbox" name="state-park" value="VT">Vermont<br />
+                <input type="checkbox" name="state-park" value="VA">Virginia<br />
+                <input type="checkbox" name="state-park" value="WA">Washington<br />
+                <input type="checkbox" name="state-park" value="WV">West Virginia<br />
+                <input type="checkbox" name="state-park" value="WI">Wisconsin<br />
+                <input type="checkbox" name="state-park" value="WY">Wyoming<br />
+
+            <!-- <label for="search-term">Search for a park</label>
+            <input type="text" name="search-term" id="js-search-term" required> -->
+                <br />
+
+            <input type="submit" value="Go!">
+        </fieldset>
+        </div>
+        </form>
+
+        <p id="js-error-message" class="error-message"></p>
+        <section id="results" class="hidden">
+          <h2>Search results</h2>
+          <p>Note: Some national parks cross state lines, so you may see the same park in multiple states even if you only chose 1 state to begin with.</p>
+          <ul id="results-list">
+          </ul>
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
