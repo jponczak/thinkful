@@ -24,7 +24,6 @@ function formatQueryParams(stateArr, maxResults) {
 //this function gets a string of lat / long from the national parks api and builds
 //a new query string formatted for opencagedata
 function getAddressFromApi(latLongArr) {
-
    var latLongStr = latLongArr.replace('lat:','').replace('long:','').replace(', ',',');
    var queryString = [encodeURIComponent(latLongStr), `key=${opencageApiKey}`];
    const openUrl = openCageBaseURL + '?q=' + queryString.join('&');
@@ -54,7 +53,8 @@ function displayResults(responseJson) {
         throw new Error(response.statusText);
       })
       .then(response2Json =>  {
-        //found an address! build the rest of the results
+        console.log('woo');
+        //found an address! build the rest.
        $('#results-list').append(
         `<br /><br />
         <l1>State(s): ${responseJson.data[i].states}</l1><br />
