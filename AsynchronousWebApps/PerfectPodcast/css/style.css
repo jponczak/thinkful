@@ -14,3 +14,7 @@
   .hidden {
     display: none;
   }
+
+  .error-to, .error-from, .mapquest-error {
+    display: none;
+  }
