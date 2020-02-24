@@ -15,6 +15,6 @@
     display: none;
   }
 
-  .error-to, .error-from, .mapquest-error {
+  .error-to, .error-from, .error-mapquest {
     display: none;
   }
