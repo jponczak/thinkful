@@ -53,7 +53,6 @@ function displayResults(responseJson) {
         throw new Error(response.statusText);
       })
       .then(response2Json =>  {
-        console.log('woo');
         //found an address! build the rest.
        $('#results-list').append(
         `<br /><br />

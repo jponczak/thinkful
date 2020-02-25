@@ -15,21 +15,29 @@
         <h2 class = "error-mapquest"></h2>
         <form>
             <label for="from-address">From</label>
-            <input type="text" id="from-address" value="123 Main Street, Los Angeles, CA 90210" name="from-address"><br />
+            <input type="text" id="from-address" value="fairfax, va" name="from-address"><br />
             <h4 class="error-from">This field is required!</h4>
             <label for="to-address">To</label>
-            <input type="text" id="to-address" value="321 Second Street, Los Angeles, CA 90210" name="to-address"><br />
+            <input type="text" id="to-address" value="baltimore, md" name="to-address"><br />
             <h4 class="error-to">This field is required!</h4>
             <label for="podcast-interests">Podcast Interests</label>
             <input type="text" id="podcast-interests" value="Mystery, finance, politics" name="podcast-interests"><br />
             <input type="submit" value="Find podcasts">
         </form>
         <section class="results hidden">
-          <h2>Podcast results</h2>
+          <h2>direction data</h2>
+          <section class="mapquest-results">
+          </section>
         </section>
-    </div>
+        <section class="podcast-result hidden">
+            <h2>podcast data</h2>
+            <section class="podcast-results">
+            </section>
+          </section>
+      </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="./js/utils.js"></script>
+    <script src="./js/api.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

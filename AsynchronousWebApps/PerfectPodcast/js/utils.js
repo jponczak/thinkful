@@ -1,4 +1,24 @@
 
+/* build the mapquest API string */
+let buildAddressQueryString = (userData) => {
+    let queryString = [];
+    let queryFrom = encodeURIComponent(userData.from);
+    let queryTo = encodeURIComponent(userData.to);
+    queryString.push(`from=${queryFrom}`, `to=${queryTo}`, `key=${mapquestApiKey}`);
+
+    return queryString.join('&');
+}
+
+/* build an array of listen now URLs */
+let buildListenNowURL = (userData) => {
+
+    let listenNowUrl = [];
+    for (let x = 0; x < userData.podcastInterests.length; x++) {
+        listenNowUrl.push(`${listenNotesBaseURL}?q=${userData.podcastInterests[x]}&len_min=10&len_max=${userData.travelTime}&sort_by_date=0&type=episode&offset=0&published_before=1580172454000&published_after=0&only_in=title%2Cdescription&language=English&safe_mode=1`);
+    }
+
+    return listenNowUrl;
+}
 
 /* make sure the from and to fields are not empty */
 let validateForm = (userData) => {
@@ -13,14 +33,16 @@ let validateForm = (userData) => {
     return true;
 }
 
-let interestsToArray = (podcastInterestString) => {
-    if (podcastInterestString.search(', ') != -1) {
-        return podcastInterestString.split(', ');
+/* convert string to array */
+let interestsToArray = (stringToConvert) => {
+    if (stringToConvert.search(', ') != -1) {
+        return stringToConvert.split(', ');
     } else {
-        return podcastInterestString;
+        return stringToConvert;
     }
 }
 
+/* display in proper HH:MM:SS format */
 let toHHMMSS = (secs) => {
     let sec_num = parseInt(secs, 10)
     let hours = Math.floor(sec_num / 3600)
