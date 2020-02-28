@@ -53,6 +53,14 @@ let watchForm = () => {
 
 $(function () {
   console.log('App loaded! Waiting for submit!');
+  //smooth scroll
+  $('#view-work').on('click', function() {
+    var images = $('#images').position().top;
+
+    $('html, body').animate({
+      scrollTop: images
+    }, 900);
+  });
   watchForm();
 
 });

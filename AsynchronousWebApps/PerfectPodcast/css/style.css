@@ -1,15 +1,236 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+
 * {
     box-sizing: border-box;
   }
-  
+
   body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    background-color: #eee;
+    height: auto;
+  }
+
+  h1 {
+    font-weight: 400;
+    font-size:2.5rem;
+    text-transform: uppercase;
+    margin: 0;
+    color: #232931;
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    margin: 0;
   }
   
+  img {
+    display: block;
+    width: 100%;
+    opacity: 0.4;
+  }
+
+  main {
+    max-width: 900px;
+    margin: auto;
+    box-shadow: 30px 0px 40px rgba(0,0,0,0.1), -30px 0px 40px rgba(0,0,0,0.1);
+  }
+
+  #landing {
+    background: #eee;
+  }
+
+  #landing-text {
+    display: flex;
+    flex: 0 1 40vw;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  #landing-text h2, #direction-text h2 {
+    color: #00a8cc;
+  }
+
+  #landing-image {
+    background: url(https://source.unsplash.com/GS2SNt_naEg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    flex: 0 1 60vw;
+    margin: 0;
+    opacity: 0.5;
+  }
+
+  .btn {
+    padding: 0.5rem 2rem;
+    border: 1px #ccc solid;
+    display: inline-block;
+    margin: 2rem 0 0;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #0c7b93;
+    transition: background 500ms ease;
+  }
+
+  .btn:hover {
+    background: #f4f4f4;
+  }
+
+  .directions-text-inner, .podcasts-text-inner {
+    padding: 0.5rem 2rem;
+    border: 1px #ccc solid;
+    display: inline-block;
+    margin: 2rem 0 0;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #eee;
+    transition: background 500ms ease;
+    background-color: #142850;
+  }
+
+  #header {
+    padding: 1.5rem;
+    text-align: center;
+    background: #333;
+    color: #fff;
+  }
+
+  #header h2 {
+    border-left: dotted 1px #fff;
+    border-right: dotted 1px #fff;
+    display: inline-block;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    color: #00a8cc;
+  }
+  .caption {
+    padding: 0.8rem;
+    text-align: center;
+    /* height: 50vh; */
+    opacity: .73;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin: auto;
+    color: #333;
+  }
+
+  footer h3 {
+    font-size: 3rem;
+    margin-bottom: 0;
+  }
+
+  /* screen sizes 500px and up */
+  @media(min-width:500px) {
+    #landing {
+      display: flex;
+      height: 100%;
+    }
+
+    #landing-text {
+      height: 100vh;
+    }
+
+    #landing-image, #image-text {
+      height: 100vh;
+    }
+  }
+
+  /* screen sizes 700px and up */
+  @media(min-width:700px) {
+    .btn {
+      padding: 1rem 3rem;
+    }
+  }
+
+
+
   .container {
     max-width: 600px;
+    width: 80%;
     margin: 0 auto;
   }
+
+
+.flex-outer,
+.flex-inner {
+  list-style-type: none;
+  padding: 0;
+}
+
+.flex-outer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.flex-outer li,
+.flex-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-inner {
+  padding: 0 8px;
+  justify-content: space-between;  
+}
+
+.flex-outer > li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.flex-outer li label,
+.flex-outer li p {
+  padding: 8px;
+  font-weight: 300;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.flex-outer > li > label,
+.flex-outer li p {
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+
+.flex-outer > li > label + *,
+.flex-inner {
+  flex: 1 0 220px;
+}
+
+.flex-outer li p {
+  margin: 0;
+}
+
+.flex-outer li input:not([type='checkbox']),
+.flex-outer li textarea {
+  padding: 15px;
+  border: none;
+}
+
+.flex-outer li button {
+  margin-left: auto;
+  padding: 8px 16px;
+  border: none;
+  background: #333;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  border-radius: 2px;
+}
+
+.flex-inner li {
+  width: 100px;
+}
   
   .hidden {
     display: none;
