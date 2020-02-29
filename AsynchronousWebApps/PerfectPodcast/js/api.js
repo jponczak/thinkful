@@ -1,6 +1,6 @@
 
 const mapquestApiKey = 'ofGSjKNQtDZF0b56ryF0tdBawpRqNoX6';
-const mapquestBaseURL = 'http://www.mapquestapi.com/directions/v2/route';
+const mapquestBaseURL = 'https://www.mapquestapi.com/directions/v2/route';
 
 const listenNotesApiKey = 'e3734451a0d3414f9db6cc43b2d9c189';
 const listenNotesBaseURL = ' https://listen-api.listennotes.com/api/v2/search';
