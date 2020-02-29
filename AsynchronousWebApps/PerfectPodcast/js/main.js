@@ -4,12 +4,13 @@ var listenNowPodcasts = [];
 
 let renderMapQuestResults = (responseJson, userData) => {
   let legs = responseJson.route.legs[0].maneuvers;
-  // $('.results').removeClass('hidden');
+  // $('#directions').removeClass('hidden');
+  $('#podcasts').removeClass('hidden');
   // $('.podcast-result').removeClass('hidden');
 
   let htmlResults = '';
   for (let x = 0; x < legs.length; x++) {
-    htmlResults += `${x + 1}. ${legs[x].narrative}<br />`
+    htmlResults += `<p class="step-by-step">${x + 1}. ${legs[x].narrative}</p>`
   }
 
   // $('.mapquest-results').html(htmlResults);
@@ -18,10 +19,14 @@ let renderMapQuestResults = (responseJson, userData) => {
 
 let renderListenNowResults = (podcastData) => {
 
+
+  console.log(podcastData);
   let htmlResults = '';
   for (let x = 0; x < podcastData.length; x++) {
-    htmlResults += `${podcastData[x].title_original}<br />`;
+    htmlResults += `<p><a href="${podcastData[x].listennotes_url}" alt="" target="_blank">${podcastData[x].title_original}</a><br /><span class="publisher"> (${podcastData[x].publisher_highlighted})</span></p>`;
   }
+
+  console.log(htmlResults);
 
   $('.podcasts-text-inner').html(htmlResults);
 
@@ -46,11 +51,11 @@ let watchForm = () => {
       getAddressApi(userData);
     } else console.log('false');
 
-    var direction = $('#directions-text').position().top;
+    // var direction = $('#directions-text').position().top;
 
-    $('html, body').animate({
-      scrollTop: direction
-    }, 4500);
+    // $('html, body').animate({
+    //   scrollTop: direction
+    // }, 4500);
   
   });
 
@@ -60,30 +65,28 @@ let watchForm = () => {
 $(function () {
   console.log('App loaded! Waiting for submit!');
   //smooth scroll
-  $('#directions').on('click', function() {
-    var direction = $('#directions-text').position().top;
-    var podcast = $('#podcasts-text').position().top;
-    var find = $('#find').position().top;
+  $('#dirs').on('click', function() {
+    console.log('directions ,..');
+    $('#directions').removeClass('hidden');
 
-    $('html, body').animate({
-      scrollTop: direction
-    }, 4500);
-    $('html, body').animate({
-      scrollTop: podcast
-    }, 4500);
-    $('html, body').animate({
-      scrollTop: find
-    }, 2300);
+    // var direction = $('#directions-text').position().top;
+    // // var podcast = $('#podcasts-text').position().top;
+    // // var find = $('#find').position().top;
+
+    // $('html, body').animate({
+    //   scrollTop: direction
+    // }, 900);
   });
 
   $('#find-pods').on('click', function() {
-    console.log('cliek');
     var gotoForm = $('.flex-outer').position().top;
 
     $('html, body').animate({
       scrollTop: gotoForm
     }, 900);
   });
+
+  $('.nav-content').hide();
 
   watchForm();
 

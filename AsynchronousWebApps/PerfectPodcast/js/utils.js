@@ -12,9 +12,15 @@ let buildAddressQueryString = (userData) => {
 /* build an array of listen now URLs */
 let buildListenNowURL = (userData) => {
 
+    console.log(userData);
     let listenNowUrl = [];
-    for (let x = 0; x < userData.podcastInterests.length; x++) {
-        listenNowUrl.push(`${listenNotesBaseURL}?q=${userData.podcastInterests[x]}&len_min=10&len_max=${userData.travelTime}&sort_by_date=0&type=episode&offset=0&published_before=1580172454000&published_after=0&only_in=title%2Cdescription&language=English&safe_mode=1`);
+
+    if (Array.isArray(userData.podcastInterests)) {
+        for (let x = 0; x < userData.podcastInterests.length; x++) {
+            listenNowUrl.push(`${listenNotesBaseURL}?q=${userData.podcastInterests[x]}&len_min=10&len_max=${userData.travelTime}&sort_by_date=0&type=episode&offset=0&published_before=1580172454000&published_after=0&only_in=title%2Cdescription&language=English&safe_mode=1`);
+        }    
+    } else {
+        listenNowUrl.push(`${listenNotesBaseURL}?q=${userData.podcastInterests}&len_min=10&len_max=${userData.travelTime}&sort_by_date=0&type=episode&offset=0&published_before=1580172454000&published_after=0&only_in=title%2Cdescription&language=English&safe_mode=1`);
     }
 
     return listenNowUrl;

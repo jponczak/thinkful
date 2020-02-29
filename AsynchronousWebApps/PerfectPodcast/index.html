@@ -12,16 +12,24 @@
 </head>
 
 <body>
+
     <main>
-        <!-- landing area -->
+        <!-- <button id="topBtn" title="Go to top">Top</button> -->
+        <nav>
+            <input class="menu-btn" type="checkbox" id="menu-btn" /> 
+            <label class="menu-icon" for="menu-btn" value="menu hamburger"><span class='nav-content'>Hamburger Menu</span><span class="navicon"></span></label>
+            <ul class="menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#find">Find</a></li>
+                <!-- <li><a href="#learn">Learn</a></li> -->
+            </ul>
+        </nav>
+            <!-- landing area -->
         <div id="landing">
             <div id="landing-text">
                 <div id="landing-text-inner">
                     <h1>The Perfect Podcast</h1>
                     <h2>Perfectly Timed Podcasts for your daily commute.</h2>
-                    <a href="#directions" class="btn" id="directions">
-                        How It Works
-                    </a>
                     <a href="#find-podcast" class="btn" id="find-pods">
                         Let's Try
                     </a>
@@ -29,51 +37,38 @@
             </div>
             <div id="landing-image"></div>
         </div>
-        <div id="directions">
+        <div id="podcasts" class="hidden">
             <div id="header">
-                <h2>Example Directions</h2>
-            </div>
-            <div id="directions-text" class="caption" style="background-image: url(https://source.unsplash.com/1600x900/?traffic,listen)">
-                <div class="directions-text-inner">
-                    <h3>Start With Directions (like Fairfax to Tysons)</h3>
-                    <p>1. right left right left right left right left right left</p>
-                    <p>1. right left right left right left right left right left</p>
-                    <p>1. right left right left right left right left right left</p>
-                    <p>1. right left right left right left right left right left</p>
-                    <p>1. right left right left right left right left right left</p>
-                    <p>1. right left right left right left right left right left</p>
-                    <p>1. right left right left right left right left right left</p>
-                    <p>1. right left right left right left right left right left</p>
-
-                </div>
-            </div>
-        </div>
-        <div id="podcasts">
-            <div id="header">
-                <h2>Example Podcasts</h2>
+                <h2>Podcasts</h2>
             </div>
             <div id="podcasts-text" class="caption" style="background-image: url(https://source.unsplash.com/1600x900/?traffic,city)">
                 <div class="podcasts-text-inner">
                     <h3>End Up With Perfectly Timed Podcasts</h3>
-                    <p>1. right left right left right left right left right left</p>
-                    <p>1. right left right left right left right left right left</p>
-                    <p>1. right left right left right left right left right left</p>
-                    <p>1. right left right left right left right left right left</p>
-                    <p>1. right left right left right left right left right left</p>
-                    <p>1. right left right left right left right left right left</p>
-                    <p>1. right left right left right left right left right left</p>
-                    <p>1. right left right left right left right left right left</p>
+                </div>
+                    <a href="#directions" class="btn" id="dirs">
+                        Want Directions?
+                    </a>
 
+            </div>
+        </div>
+        <div id="directions" class="hidden">
+            <div id="header">
+                <h2>Directions</h2>
+            </div>
+            <div id="directions-text" class="caption" style="background-image: url(https://source.unsplash.com/1600x900/?traffic,listen)">
+                <div class="directions-text-inner">
+                        <p class="steps">Submit your from/to addresses</p>
+                        <p class="steps">Identify some topics</p>
                 </div>
             </div>
         </div>
+
         <div id="find">
             <div id="header">
                 <h2>Find My Podcasts</h2>
             </div>
             <div id="find-text" class="caption" style="background-image: url(https://source.unsplash.com/1600x900/?traffic,city)">
                 <div class="container">
-                    <h1>Find Your Perfect Podcast</h1>
                     <h2 class="error-mapquest"></h2>
                     <form>
                         <ul class="flex-outer">
@@ -96,18 +91,6 @@
                           </li>
                         </ul>
                       </form>                    
-                      <!-- <form>
-                        <label for="from-address">From</label>
-                        <input type="text" id="from-address" value="fairfax, va" name="from-address"><br />
-                        <h4 class="error-from">This field is required!</h4>
-                        <label for="to-address">To</label>
-                        <input type="text" id="to-address" value="baltimore, md" name="to-address"><br />
-                        <h4 class="error-to">This field is required!</h4>
-                        <label for="podcast-interests">Podcast Interests</label>
-                        <input type="text" id="podcast-interests" value="Mystery, finance, politics"
-                            name="podcast-interests"><br />
-                        <input type="submit" value="Find podcasts">
-                    </form> -->
                     <section class="results hidden">
                         <h2>direction data</h2>
                         <section class="mapquest-results">
@@ -121,41 +104,17 @@
                 </div>
         </div>
         </div>
-
-            <!-- <div id="example-image">
-                <h3>Podcasts</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati ipsa explicabo, voluptatibus,
-                    inventore numquam dolor, modi eum unde eaque voluptatem quisquam ducimus officiis sit totam.
-                    Doloribus vel ex eaque eum!</p>
-
-            </div>     -->
-                <!-- <div class="caption">
-                    <h3>Fairfax to Tysons</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati ipsa explicabo, voluptatibus,
-                        inventore numquam dolor, modi eum unde eaque voluptatem quisquam ducimus officiis sit totam.
-                        Doloribus vel ex eaque eum!</p> 
-                </div> -->
-                <!-- <img src="https://source.unsplash.com/1600x900/?traffic,listen" alt=""> -->
-                <!-- <div class="caption">
-                    <h3>Photo Two</h3>
-
-                </div> -->
-                <!-- <img src="https://source.unsplash.com/1600x900/?nature,road" alt=""> -->
-                <!-- <div class="caption">
-                    <h3>Photo Three</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati ipsa explicabo, voluptatibus,
-                        inventore numquam dolor, modi eum unde eaque voluptatem quisquam ducimus officiis sit totam.
-                        Doloribus vel ex eaque eum!</p>
-                </div> -->
-                <!-- <img src="https://source.unsplash.com/1600x900/?traffic" alt=""> -->
-
-        <!-- </div> -->
     </main>
-    <footer>
-        <h3>Get in touch</h3>
-        <p>email or call us</p>
-        <p>email: <strong>jponczak@gmail.com</strong></p>
-        <p>phone: <strong>123-456-7890</strong></p>
+    <footer id="about">
+        <div id="header">
+            <h2>About</h2>
+        </div>
+        <class class="footer-inner">
+            <h4>Perfect Podcasts helps you find perfectly timed podcasts with your daily commute.</h4>
+            <p><strong>Developed By: </strong>jponczak@gmail.com | <a href="https://github.com/jponczak/thinkful" target="_blank">Github</a> | <a href="https://www.linkedin.com/in/jponczak/" target="_blank">LinkedIn</a></p>
+            <p><strong>Powered By: </strong> <a href="http://mapquest.com" target="_blank">MapQuest</a> | <a href="http://listennotes.com" target="_blank">ListenNotes</a></p>
+    
+        </class>
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>

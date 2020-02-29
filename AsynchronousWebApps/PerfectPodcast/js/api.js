@@ -65,7 +65,8 @@ let fetchListenNow = (responseJson, userData) => {
             })
             .then(responseJson => {
                 //do something with the responseJson
-
+                console.log(responseJson);
+                console.log(responseJson.results.length);
                 for (let x = 0; x < responseJson.results.length; x++) {
                     listenNowPodcasts.push(responseJson.results[x]);
                 }
@@ -75,7 +76,11 @@ let fetchListenNow = (responseJson, userData) => {
             .catch(err => {
                 $('#js-error-message').text(`Something went wrong: ${err.message}`);
             }).finally(() => {
-                if ((Number(counter)) === Number(userData.podcastInterests.length)) {
+                if (Array.isArray(userData.podcastInterests)) {
+                    if ((Number(counter)) === Number(userData.podcastInterests.length)) {
+                        renderListenNowResults(listenNowPodcasts);
+                    }    
+                } else {
                     renderListenNowResults(listenNowPodcasts);
                 }
             });
