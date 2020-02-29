@@ -1,0 +1,31 @@
+
+  /* screen sizes 500px and up */
+  @media(min-width:500px) {
+    #landing {
+      display: flex;
+      height: 100%;
+    }
+
+    #landing-text {
+      height: 100vh;
+    }
+
+    #landing-image, #image-text {
+      height: 100vh;
+    }
+    nav li a {
+      font-size: 1.2rem;
+    }
+
+  footer p {
+    font-size: 1rem;
+  }
+  
+  }
+
+  /* screen sizes 700px and up */
+  @media(min-width:700px) {
+    .btn {
+      padding: 1rem 3rem;
+    }
+  }

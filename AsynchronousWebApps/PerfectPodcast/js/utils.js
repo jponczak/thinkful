@@ -12,7 +12,6 @@ let buildAddressQueryString = (userData) => {
 /* build an array of listen now URLs */
 let buildListenNowURL = (userData) => {
 
-    console.log(userData);
     let listenNowUrl = [];
 
     if (Array.isArray(userData.podcastInterests)) {
