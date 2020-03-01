@@ -12,8 +12,8 @@
 </head>
 
 <body>
-
     <main>
+        <!-- hambuger menu! -->
         <nav>
             <input class="menu-btn" type="checkbox" id="menu-btn" /> 
             <label class="menu-icon" for="menu-btn" value="menu hamburger"><span class='nav-content'>Hamburger Menu</span><span class="navicon"></span></label>
@@ -35,6 +35,7 @@
             </div>
             <div id="landing-image"></div>
         </div>
+        <!-- podcast data -->
         <div id="podcasts" class="hidden">
             <div id="header">
                 <h2>Podcasts</h2>
@@ -49,6 +50,7 @@
 
             </div>
         </div>
+        <!-- directions -->
         <div id="directions" class="hidden">
             <div id="header">
                 <h2>Directions</h2>
@@ -60,7 +62,7 @@
                 </div>
             </div>
         </div>
-
+        <!-- user form -->
         <div id="find">
             <div id="header">
                 <h2>Find My Podcasts</h2>
@@ -68,17 +70,21 @@
             <div id="find-text" class="caption" style="background-image: url(https://source.unsplash.com/1600x900/?traffic,city)">
                 <div class="container">
                     <h2 class="error-mapquest"></h2>
-                    <form>
+                    <form id="user-form">
+                        <class class="error-message">
+                            <ul>
+                                <li><strong>Going From: </strong>required</li>
+                                <li><strong>Going To: </strong>required</li>
+                            </ul>
+                        </class>
                         <ul class="flex-outer">
                           <li>
                             <label for="from-address">Going From</label>
                             <input type="text" id="from-address" value="fairfax, va" name="from-address">
-                            <h4 class="error-from">This field is required!</h4>
                         </li>
                           <li>
                             <label for="to-address">Going To</label>
                             <input type="text" id="to-address" value="baltimore, md" name="to-address"><br />
-                            <h4 class="error-to">This field is required!</h4>
                               </li>
                           <li>
                             <label for="podcast-interests">Podcast Interests</label>
@@ -103,6 +109,7 @@
         </div>
         </div>
     </main>
+    <!-- footer -->
     <footer id="about">
         <div id="header">
             <h2>About</h2>
@@ -110,8 +117,7 @@
         <class class="footer-inner">
             <h4>Perfect Podcasts helps you find perfectly timed podcasts with your daily commute.</h4>
             <p><strong>Developed By: </strong>jponczak@gmail.com | <a href="https://github.com/jponczak/thinkful" target="_blank">Github</a> | <a href="https://www.linkedin.com/in/jponczak/" target="_blank">LinkedIn</a></p>
-            <p><strong>API Data From: </strong> <a href="http://mapquest.com" target="_blank">MapQuest</a> | <a href="http://listennotes.com" target="_blank">ListenNotes</a></p>
-    
+            <p><strong>API Data From: </strong> <a href="http://mapquest.com" target="_blank">MapQuest</a> | <a href="http://listennotes.com" target="_blank">ListenNotes</a></p>   
         </class>
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.js"

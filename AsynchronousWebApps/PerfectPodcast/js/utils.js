@@ -14,25 +14,22 @@ let buildListenNowURL = (userData) => {
 
     let listenNowUrl = [];
 
+    let currentDate = Date.now();
+
     if (Array.isArray(userData.podcastInterests)) {
         for (let x = 0; x < userData.podcastInterests.length; x++) {
-            listenNowUrl.push(`${listenNotesBaseURL}?q=${userData.podcastInterests[x]}&len_min=10&len_max=${userData.travelTime}&sort_by_date=0&type=episode&offset=0&published_before=1580172454000&published_after=0&only_in=title%2Cdescription&language=English&safe_mode=1`);
+            listenNowUrl.push(`${listenNotesBaseURL}?q=${userData.podcastInterests[x]}&len_min=10&len_max=${userData.travelTime}&sort_by_date=0&type=episode&offset=0&published_before=${currentDate}&published_after=0&only_in=title%2Cdescription&language=English&safe_mode=1`);
         }    
     } else {
-        listenNowUrl.push(`${listenNotesBaseURL}?q=${userData.podcastInterests}&len_min=10&len_max=${userData.travelTime}&sort_by_date=0&type=episode&offset=0&published_before=1580172454000&published_after=0&only_in=title%2Cdescription&language=English&safe_mode=1`);
+        listenNowUrl.push(`${listenNotesBaseURL}?q=${userData.podcastInterests}&len_min=10&len_max=${userData.travelTime}&sort_by_date=0&type=episode&offset=0&published_before=${currentDate}&published_after=0&only_in=title%2Cdescription&language=English&safe_mode=1`);
     }
-
     return listenNowUrl;
 }
 
 /* make sure the from and to fields are not empty */
 let validateForm = (userData) => {
-    if (userData.from.length == 0) {
-        $('.error-from').css('display', 'block');
-        return false;
-    }
-    if (userData.to.length == 0) {
-        $('.error-to').css('display', 'block');
+    if (userData.from.length == 0 || userData.to.length == 0) {
+        $('.error-message').css('display', 'block');
         return false;
     }
     return true;
@@ -62,7 +59,5 @@ let toHHMMSS = (secs) => {
 
 /* reset some of the css classes */
 let resetClasses = () => {
-    $('.error-to').css('display', 'none');
-    $('.error-from').css('display', 'none');
-    $('.error-mapquest').css('display', 'none');
+    $('.error-message').css('display', 'none');
 }

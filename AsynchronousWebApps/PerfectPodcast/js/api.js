@@ -18,6 +18,8 @@ let getAddressApi = (userData) => {
             parseMapquestResponse(responseJson, userData);
         })
         .catch(err => {
+            $('.error-mapquest').html('There was an API problem. Please try again ...');
+            $('.error-mapquest').css('display', 'block');    
             $('#js-error-message').text(`Something went wrong: ${err.message}`);
         });
 }
@@ -77,9 +79,12 @@ let fetchListenNow = (responseJson, userData) => {
                 if (Array.isArray(userData.podcastInterests)) {
                     if ((Number(counter)) === Number(userData.podcastInterests.length)) {
                         renderListenNowResults(listenNowPodcasts);
+                        listenNowPodcasts = [];
                     }    
                 } else {
                     renderListenNowResults(listenNowPodcasts);
+                    userData.listenNowUrl = [];
+                    listenNowPodcasts = [];
                 }
             });
     }

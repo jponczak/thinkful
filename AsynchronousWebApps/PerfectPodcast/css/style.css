@@ -62,14 +62,15 @@ footer {
 }
 
 #landing-image {
-  background: url(https://source.unsplash.com/GS2SNt_naEg);
+  background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url(https://source.unsplash.com/GS2SNt_naEg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 50vh;
   flex: 0 1 60vw;
   margin: 0;
-  opacity: 0.5;
+  /* opacity: 0.5; */
+
 }
 
 .btn {
@@ -78,13 +79,15 @@ footer {
   display: inline-block;
   margin: 2rem 0 0;
   border-radius: 50px;
+  color:#f4f4f4;
   text-decoration: none;
-  color: #0c7b93;
+  background-color: #0c7b93;
   transition: background 500ms ease;
 }
 
 .btn:hover {
-  background: #f4f4f4;
+  background-color: #f4f4f4;
+  color: #0c7b93;
 }
 
 .directions-text-inner,
@@ -135,7 +138,7 @@ footer {
 
 .podcasts-text-inner p,
 .step-by-step {
-  background-color: #fff;
+  background-color: rgba(255,255,255,0.8);
 }
 
 .podcasts-text-inner a {
@@ -150,9 +153,6 @@ nav,
 footer {
   padding: 1% 0;
 }
-
-
-
 
 nav {
   background-color: #008acc;
@@ -262,7 +262,6 @@ nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
 
-
 .container {
   max-width: 600px;
   width: 80%;
@@ -270,7 +269,7 @@ nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
 }
 
 form {
-  background-color: #fff;
+  background-color: rgba(255,255,255,0.7);
   /* opacity: .65; */
 }
 
@@ -352,13 +351,15 @@ form {
   display: none;
 }
 
-.error-to,
-.error-from,
-.error-mapquest {
+.error-message {
   display: none;
-  font-size: .5rem;
-  text-align:center;
+  font-size: 1.2rem;
+  text-align:left;
   color: red;
+}
+
+.error-message ul li {
+  list-style: none;
 }
 
 .footer-inner {
