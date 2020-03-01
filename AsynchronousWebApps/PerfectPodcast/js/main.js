@@ -61,12 +61,10 @@ let watchForm = () => {
   });
 }
 
+/* main */
 $(function () {
-  //smooth scroll
-  $('#dirs').on('click', function () {
-    $('#directions').removeClass('hidden');
-
-  });
+  $('.nav-content').hide();
+  watchForm();
 
   //slow scroll from landing page button to form
   $('#find-pods').on('click', function () {
@@ -77,8 +75,10 @@ $(function () {
     }, 900);
   });
 
-  $('.nav-content').hide();
-
-  watchForm();
+  // if the user wants to see directions after
+  //the podcasts load ...
+  $('#dirs').on('click', function () {
+    $('#directions').removeClass('hidden');
+  });
 
 });
