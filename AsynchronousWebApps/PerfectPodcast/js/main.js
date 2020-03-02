@@ -2,14 +2,25 @@
 
 var listenNowPodcasts = [];
 
+const errors = {
+  noMaps: "MapQuest could not find any directions with those addresses.",
+  noPodcasts: "ListenNow could not find any podcasts with based on your search terms.",
+  noForm: "To and From fields are both required.",
+}
+
 /* render the directions html */
 let renderMapQuestResults = (responseJson, userData) => {
   let legs = responseJson.route.legs[0].maneuvers;
   $('#podcasts').removeClass('hidden');
 
   let htmlResults = '';
-  for (let x = 0; x < legs.length; x++) {
-    htmlResults += `<p class="step-by-step">${x + 1}. ${legs[x].narrative}</p>`
+
+  if (legs.length > 0) {
+    for (let x = 0; x < legs.length; x++) {
+      htmlResults += `<p class="step-by-step">${x + 1}. ${legs[x].narrative}</p>`
+    }
+  } else {
+    htmlResults = `<p>${errors.noMaps}</p>`;
   }
 
   $('.directions-text-inner').html(htmlResults);
@@ -18,9 +29,15 @@ let renderMapQuestResults = (responseJson, userData) => {
 /* render the podcast html*/
 let renderListenNowResults = (podcastData) => {
   let htmlResults = '';
-  for (let x = 0; x < podcastData.length; x++) {
-    htmlResults += `<p><a href="${podcastData[x].listennotes_url}" alt="" target="_blank">${podcastData[x].title_original}</a><br /><span class="publisher"> (${podcastData[x].publisher_highlighted})</span></p>`;
+
+  if (podcastData.length > 0) {
+    for (let x = 0; x < podcastData.length; x++) {
+      htmlResults += `<p><a href="${podcastData[x].listennotes_url}" alt="" target="_blank">${podcastData[x].title_original}</a><br /><span class="publisher"> (${podcastData[x].publisher_highlighted})</span></p>`;
+    }  
+  } else {
+    htmlResults = `<p>${errors.noPodcasts}</p>`;
   }
+
   
   //displayed podcasts may be longer than image,
   //so instead of repeating images, just use a 

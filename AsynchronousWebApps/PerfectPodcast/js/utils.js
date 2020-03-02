@@ -29,7 +29,7 @@ let buildListenNowURL = (userData) => {
 /* make sure the from and to fields are not empty */
 let validateForm = (userData) => {
     if (userData.from.length == 0 || userData.to.length == 0) {
-        $('.error-message').css('display', 'block');
+        $('.error-message').html(`<p>${errors.noForm}</p>`).css('display', 'block');
         return false;
     }
     return true;
