@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src='main.js'></script>
+</head>
+
+<body>
+  <div id="application-root">
+
+  </div>
+  <script src="https://unpkg.com/react@16/umd/react.development.js">
+  </script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+  </script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js">
+  </script>
+  <script type="text/babel">
+    const appRoot = document.querySelector("#application-root");
+    //const helloWorld = React.createElement('h1', null, 'hello there!');
+    //now, if using babel -> its like html within javascript
+    //const helloWorld = <h1>hello world!</h1>;
+    function App() {
+
+      const sallyStudentImage = 'https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg';
+      const target = '_blank';
+      const sallyImgAltText = 'Sally Student profile picture';
+      const content = 'Sally Student';
+      const emailAddyLink = 'mailto:sally@yahoo.com';
+      const emailAddy = 'sally@yahoo.com';
+      const phone = '123-456-7890'
+      const sallyAddy = '123 anyplace st., somewhere, va 000111';
+
+      const sallyImgSrc = (
+        <img src={sallyStudentImage} alt={sallyImgAltText} />
+      );
+
+      const sallyStudentAnchor = (
+        <a href={sallyStudentImage} target={target}>
+          {sallyImgSrc}
+        </a>
+      );
+
+      const address = (
+        <a href={emailAddyLink}>{emailAddy}</a>
+      );
+
+      const summary = (
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
+      );
+
+      return (
+        <main>
+          <section id='resume'>
+            <section className='name'>
+              <header>
+                {content}
+                {sallyStudentAnchor}
+              </header>
+              <section className='contact'>
+                <address>{sallyAddy}</address>
+                {address}
+              </section>
+              <hr />
+              <section className='summary'>
+                <h4>Summary</h4>
+                <p>{summary}</p>
+              </section>
+              <section className='education'>
+                <h4>Education</h4>
+                <ol>
+                  <li>
+                    <div>
+                      <p>M.S. Cyber Security</p>
+                      <time datetime="2014-01-01">Jan 2014 to Dec 2018</time>
+                    </div>
+                    <div>
+                      <span>University of Maryland</span>
+                      <span></span>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <p>B.S. Information Systems</p>
+                      <time datetime="2001-01-01">Jan 2001 to Dec 2005</time>
+                    </div>
+                    <div>
+                      <span>University of Rochester</span>
+                      <span></span>
+                    </div>
+                  </li>
+                </ol>
+              </section>
+              <section className='experience'>
+                <h4>Experience</h4>
+                <ol>
+                  <li>
+                    <header>
+                      <p>Junior Full Stack Developer</p>
+                      <time datetime="2018-01-01">Jan 2018 to present</time>
+                    </header>
+                    <span>ABC Corp</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+                    <ul>
+                      <li>Something interesting here</li>
+                      <li>Something interesting here</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <header>
+                      <p>Content Administrator</p>
+                      <time datetime="2001-01-01">Jan 2001 to Dec 2017</time>
+                    </header>
+                    <span>ABC Corp</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+                    <ul>
+                      <li>Something interesting here</li>
+                      <li>Something interesting here</li>
+                    </ul>
+                  </li>
+                </ol>
+              </section>
+              <footer>
+                <h4>References</h4>
+                <span>Available upon request
+        </span>
+              </footer>
+
+            </section>
+          </section>
+        </main>
+      );
+    }
+    ReactDOM.render(<App />
+      , appRoot);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+h6 {
+    font-size: .8rem;
+    letter-spacing: 0;
+    line-height: 1.4;
+  }
+  
+  .sanserif {
+    font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
+  }
+  .name {
+    width:100%;
+  }
+  .name > header {
+    font:2em bold;
+    text-align:center;
+  }
+  
+  .contact h2 {
+    display:none;
+  }
+  
+  address, .contact {
+    text-align: center;
+  }
+  
+  .name img {
+    height:10%;
+    width:10%;
+  }
+  
+  .name h2 {
+    display:none;
+  }
+  
+  .education ol, .experience ol {
+      margin: 0;
+      padding: 0;
+  }
+  
+  p {
+      margin-top: 0;
+      margin-bottom: 0;
+  }
+  
+  ol {
+      display: block;
+      list-style-type: decimal;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      padding-inline-start: 2px;
+  }
+  
+  li {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+  }
+  li + li {
+      margin-top: 0.4em;
+  }
+  .education ol > li, .experience ol > li {
+    font-weight:300;
+  }
+  
+  .experience ol > li header p {
+      font-size: 110%;
+  }
+  
+  .education ol > li div, .experience ol > li header {
+      display: flex;
+      flex-direction: row;
+  }
+  
+  .education ol > li div > *:last-child, .experience ol > li header > *:last-child {
+      margin-left: auto;
+  }
+  
+  .experience ol > li ul {
+      padding-top: 0.5em;
+  }
+  
+  ul {
+      margin: 0;
+      padding: 0;
+  }
+  
+  .experience ol > li ul li {
+      list-style-type: circle;
+      margin-left: 1.618em;
+  }
+  
+  .experience ol > li + li {
+      margin-top: 1em;
+  }
+  
+  footer {
+    margin-top: 1em;
+  }
