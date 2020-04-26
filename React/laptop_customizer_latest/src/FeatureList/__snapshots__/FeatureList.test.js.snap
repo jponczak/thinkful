@@ -1,0 +1,218 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the UI as expected 1`] = `
+<div>
+  <fieldset
+    className="feature"
+  >
+    <legend
+      className="feature__name"
+    >
+      <h3>
+        Processor
+      </h3>
+    </legend>
+    <div
+      className="feature__item"
+    >
+      <input
+        checked={true}
+        className="feature__option"
+        id="\\"name\\":\\"17th Generation Intel Core HB (7 Core with donut spare)\\",\\"cost\\":700"
+        name="Processor"
+        onChange={[Function]}
+        type="radio"
+      />
+      <label
+        className="feature__label"
+        htmlFor="\\"name\\":\\"17th Generation Intel Core HB (7 Core with donut spare)\\",\\"cost\\":700"
+      >
+        17th Generation Intel Core HB (7 Core with donut spare)
+        (
+        $700.00
+        )
+      </label>
+    </div>
+    <div
+      className="feature__item"
+    >
+      <input
+        checked={false}
+        className="feature__option"
+        id="\\"name\\":\\"Professor X AMD Fire Breather with sidewinder technology\\",\\"cost\\":1200"
+        name="Processor"
+        onChange={[Function]}
+        type="radio"
+      />
+      <label
+        className="feature__label"
+        htmlFor="\\"name\\":\\"Professor X AMD Fire Breather with sidewinder technology\\",\\"cost\\":1200"
+      >
+        Professor X AMD Fire Breather with sidewinder technology
+        (
+        $1,200.00
+        )
+      </label>
+    </div>
+  </fieldset>
+  <fieldset
+    className="feature"
+  >
+    <legend
+      className="feature__name"
+    >
+      <h3>
+        Operating System
+      </h3>
+    </legend>
+    <div
+      className="feature__item"
+    >
+      <input
+        checked={true}
+        className="feature__option"
+        id="\\"name\\":\\"Ubuntu Linux 16.04\\",\\"cost\\":200"
+        name="Operating System"
+        onChange={[Function]}
+        type="radio"
+      />
+      <label
+        className="feature__label"
+        htmlFor="\\"name\\":\\"Ubuntu Linux 16.04\\",\\"cost\\":200"
+      >
+        Ubuntu Linux 16.04
+        (
+        $200.00
+        )
+      </label>
+    </div>
+    <div
+      className="feature__item"
+    >
+      <input
+        checked={false}
+        className="feature__option"
+        id="\\"name\\":\\"Bodhi Linux\\",\\"cost\\":300"
+        name="Operating System"
+        onChange={[Function]}
+        type="radio"
+      />
+      <label
+        className="feature__label"
+        htmlFor="\\"name\\":\\"Bodhi Linux\\",\\"cost\\":300"
+      >
+        Bodhi Linux
+        (
+        $300.00
+        )
+      </label>
+    </div>
+  </fieldset>
+  <fieldset
+    className="feature"
+  >
+    <legend
+      className="feature__name"
+    >
+      <h3>
+        Video Card
+      </h3>
+    </legend>
+    <div
+      className="feature__item"
+    >
+      <input
+        checked={true}
+        className="feature__option"
+        id="\\"name\\":\\"Toyota Corolla 1.5v\\",\\"cost\\":1150.98"
+        name="Video Card"
+        onChange={[Function]}
+        type="radio"
+      />
+      <label
+        className="feature__label"
+        htmlFor="\\"name\\":\\"Toyota Corolla 1.5v\\",\\"cost\\":1150.98"
+      >
+        Toyota Corolla 1.5v
+        (
+        $1,150.98
+        )
+      </label>
+    </div>
+    <div
+      className="feature__item"
+    >
+      <input
+        checked={false}
+        className="feature__option"
+        id="\\"name\\":\\"Mind mild breeze 2000\\",\\"cost\\":1345"
+        name="Video Card"
+        onChange={[Function]}
+        type="radio"
+      />
+      <label
+        className="feature__label"
+        htmlFor="\\"name\\":\\"Mind mild breeze 2000\\",\\"cost\\":1345"
+      >
+        Mind mild breeze 2000
+        (
+        $1,345.00
+        )
+      </label>
+    </div>
+  </fieldset>
+  <fieldset
+    className="feature"
+  >
+    <legend
+      className="feature__name"
+    >
+      <h3>
+        Display
+      </h3>
+    </legend>
+    <div
+      className="feature__item"
+    >
+      <input
+        checked={true}
+        className="feature__option"
+        id="\\"name\\":\\"15.6\\\\\\" UHD (3840 x 2160) 60Hz Bright Lights and Knobs\\",\\"cost\\":1500"
+        name="Display"
+        onChange={[Function]}
+        type="radio"
+      />
+      <label
+        className="feature__label"
+        htmlFor="\\"name\\":\\"15.6\\\\\\" UHD (3840 x 2160) 60Hz Bright Lights and Knobs\\",\\"cost\\":1500"
+      >
+        15.6" UHD (3840 x 2160) 60Hz Bright Lights and Knobs
+        (
+        $1,500.00
+        )
+      </label>
+    </div>
+    <div
+      className="feature__item"
+    >
+      <input
+        checked={false}
+        className="feature__option"
+        id="\\"name\\":\\"15.3\\\\\\" HGTV (3840 x 2160) Home makeover edition\\",\\"cost\\":1400"
+        name="Display"
+        onChange={[Function]}
+        type="radio"
+      />
+      <label
+        className="feature__label"
+        htmlFor="\\"name\\":\\"15.3\\\\\\" HGTV (3840 x 2160) Home makeover edition\\",\\"cost\\":1400"
+      >
+        15.3" HGTV (3840 x 2160) Home makeover edition
+        (
+        $1,400.00
+        )
+      </label>
+    </div>
+  </fieldset>
+</div>
+`;
