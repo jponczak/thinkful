@@ -2,9 +2,6 @@ import React, {Component} from 'react';
 import FeatureDetails from '../FeatureDetails/FeatureDetails';
 
 class FeatureItem extends Component{
-    constructor(props) {
-        super(props);
-      }
     render() {
         const selectedItems = this.props.selected;
         const featureHash = Object.keys(this.props.feature).map((key, idx) => {

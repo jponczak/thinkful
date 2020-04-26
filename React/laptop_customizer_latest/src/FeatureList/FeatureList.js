@@ -2,14 +2,12 @@ import React, {Component} from 'react';
 import FeatureItem from '../FeatureItem/FeatureItem';
 
 class FeatureList extends Component {
-    constructor(props) {
-        super(props);
-      }
     render() {
         const features = Object.keys(this.props.features).map((key, idx) => 
             <FeatureItem 
                 selected={this.props.selected} 
-                key={key} name={key} 
+                key={key} 
+                name={key} 
                 feature={this.props.features[key]} 
                 handleFeatureChange = {this.props.handleFeatureChange}
             />           

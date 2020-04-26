@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
-import Header from './Header/Header';
 import FEATURES from './FEATURES';
+import Header from './Header/Header';
 import FeatureList from './FeatureList/FeatureList';
+import SummaryList from './SummaryList/SummaryList';
+import SummaryTotal from './SummaryTotal/SummaryTotal';
 // Normalizes string as a slug - a string that is safe to use
 // in both URLs and html attributes
 
@@ -55,11 +57,18 @@ class App extends Component{
         <h2>Customize your laptop</h2>
         <FeatureList 
         features = {this.state.features} 
-        selected={this.state.selected}
+        selected = {this.state.selected}
         handleFeatureChange = {feature => this.updateFeatureOption(feature)}
          />
         </form>
         <section className="main_summary">
+        <h2>Your cart</h2>
+          <SummaryList 
+            selected = {this.state.selected}
+          />
+          <SummaryTotal 
+            selected = {this.state.selected}
+          />
         </section>
       </main>
       </div>

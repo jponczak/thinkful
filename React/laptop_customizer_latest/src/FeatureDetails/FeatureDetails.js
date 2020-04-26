@@ -2,18 +2,16 @@ import React, { Component } from 'react';
 import slugify from 'slugify';
 
 class FeatureDetails extends Component {
-    constructor(props) {
-        super(props);
-      }
-      
     render() {
         const USCurrencyFormat = new Intl.NumberFormat('en-US', {
             style: 'currency',
             currency: 'USD'
           });
-        const itemHash = `"name":"${this.props.detail.name}","cost":"${this.props.detail.cost}"`;
+
+        const detailName = JSON.stringify(this.props.detail.name);
+        const itemHash = `"name":${detailName},"cost":${this.props.detail.cost}`;
         return (
-            <div key = {itemHash} className="feature__item">
+            <div key = {slugify(itemHash)} className="feature__item">
                 <input type="radio"
                 id={itemHash}
                 className="feature__option"
